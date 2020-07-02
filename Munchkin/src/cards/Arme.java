@@ -21,11 +21,4 @@ public class Arme implements IArme {
 		this.Gros = Gros;
 	}
 
-	@Override
-	public boolean EstEquipable(Arme arme) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-
 }
