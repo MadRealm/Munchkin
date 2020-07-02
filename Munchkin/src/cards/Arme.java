@@ -1,6 +1,6 @@
 package cards;
 
-public class Arme extends Stuff implements IArme {
+public class Arme implements IArme {
 	private String NomArme;
 	private Integer ValeurEnOr;
 	private String Reserve;
@@ -8,9 +8,10 @@ public class Arme extends Stuff implements IArme {
 	private String Description;
 	private Integer NbrMain;
 	private Boolean Gros;
+	private Integer Bonus;
 
 	public Arme (String NomArme,Integer ValeurEnOr,String Reserve,String Interdit,Integer Bonus,String Description,Integer NbrMain,Boolean Gros) {
-		super(Bonus);
+		this.Bonus = Bonus;
 		this.NomArme = NomArme;
 		this.ValeurEnOr = ValeurEnOr;
 		this.Reserve = Reserve;
