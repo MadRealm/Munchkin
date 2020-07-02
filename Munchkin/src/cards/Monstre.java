@@ -2,13 +2,13 @@ package cards;
 
 public class Monstre {
 	private String Nom;
-	private Integer Force;
-	private Integer NbrNiveau;
-	private Integer NbrTresor;
+	private int Force;
+	private int NbrNiveau;
+	private int NbrTresor;
 	private String IncidentFacheux;
 	private String Description;
 	
-	public Monstre(String Nom,Integer Force,Integer NbrNiveau,Integer NbrTresor,String IncidentFacheux,String Description) {
+	public Monstre(String Nom,int Force,int NbrNiveau,int NbrTresor,String IncidentFacheux,String Description) {
 		this.Nom = Nom;
 		this.Force = Force;
 		this.NbrTresor = NbrTresor;
@@ -17,27 +17,27 @@ public class Monstre {
 		this.Description = Description;
 	}
 
-	public Integer getForce() {
+	public int getForce() {
 		return Force;
 	}
 
-	public void setForce(Integer force) {
+	public void setForce(int force) {
 		Force = force;
 	}
 
-	public Integer getNbrNiveau() {
+	public int getNbrNiveau() {
 		return NbrNiveau;
 	}
 
-	public void setNbrNiveau(Integer nbrNiveau) {
+	public void setNbrNiveau(int nbrNiveau) {
 		NbrNiveau = nbrNiveau;
 	}
 
-	public Integer getNbrTresor() {
+	public int getNbrTresor() {
 		return NbrTresor;
 	}
 
-	public void setNbrTresor(Integer nbrTresor) {
+	public void setNbrTresor(int nbrTresor) {
 		NbrTresor = nbrTresor;
 	}
 

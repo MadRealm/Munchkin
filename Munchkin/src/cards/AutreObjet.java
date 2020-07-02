@@ -2,14 +2,14 @@ package cards;
 
 public class AutreObjet implements IAutreObjet {
 	private String NomAutreObjet;
-	private Integer ValeurEnOr;
+	private int ValeurEnOr;
 	private String Reserve;
 	private String Interdit;
 	private String Description;
 	private Boolean Gros;
-	private Integer Bonus;
+	private int Bonus;
 	
-	public AutreObjet (String NomAutreobjet,Integer ValeurEnOr,String Reserve,String Interdit,Integer Bonus,String Description,Boolean Gros) {
+	public AutreObjet (String NomAutreobjet,int ValeurEnOr,String Reserve,String Interdit,int Bonus,String Description,Boolean Gros) {
 		this.Bonus = Bonus;
 		this.NomAutreObjet = NomAutreObjet;
 		this.ValeurEnOr = ValeurEnOr;

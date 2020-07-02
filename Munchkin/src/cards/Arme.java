@@ -2,15 +2,15 @@ package cards;
 
 public class Arme implements IArme {
 	private String NomArme;
-	private Integer ValeurEnOr;
+	private int ValeurEnOr;
 	private String Reserve;
 	private String Interdit;
 	private String Description;
-	private Integer NbrMain;
+	private int NbrMain;
 	private Boolean Gros;
-	private Integer Bonus;
+	private int Bonus;
 
-	public Arme (String NomArme,Integer ValeurEnOr,String Reserve,String Interdit,Integer Bonus,String Description,Integer NbrMain,Boolean Gros) {
+	public Arme (String NomArme,int ValeurEnOr,String Reserve,String Interdit,int Bonus,String Description,int NbrMain,Boolean Gros) {
 		this.Bonus = Bonus;
 		this.NomArme = NomArme;
 		this.ValeurEnOr = ValeurEnOr;

@@ -9,6 +9,7 @@ import cards.Monstre;
 public class Joueur {
     private int niveau;
     private int attack;
+    private int sex;
     private String name;
     private LinkedList<Object> hand;
     private Classe classe;
@@ -32,6 +33,8 @@ public class Joueur {
         this.setNiveau(1);
         this.setAttack(1);
         this.setName(name);
+        this.setSex(1);
+
         /*for (int i, i < 4, i++) {
             this.hand.add(nextCard("Treasure"))
             this.hand.add(nextCard("Dungeon"))
@@ -70,6 +73,13 @@ public class Joueur {
         this.attack = attack;
     }
 
+    public int getSex() {
+        return this.sex;
+    }
+
+    public void setSex(int sex) {
+        this.sex = sex;
+    }
 
     public String getName() {
         return this.name;
