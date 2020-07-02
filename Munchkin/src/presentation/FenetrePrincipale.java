@@ -26,6 +26,17 @@ public class FenetrePrincipale extends JFrame{
         this.setTitle("Munckin");
         this.setLayout(new BorderLayout());
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+    }
+
+    public void BuildPannel(){
+        JFrame pannel = new JFrame();
+        this.add(pannel, BorderLayout.NORTH);
+        JFrame inside = new JFrame();
+        BoxLayout box = new BoxLayout(inside, BoxLayout.LINE_AXIS);
+        inside.setLayout(box);
+        pannel.add(inside);
         
     }
+
 }
