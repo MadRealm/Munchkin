@@ -1,0 +1,2 @@
+module Munchkin {
+}
