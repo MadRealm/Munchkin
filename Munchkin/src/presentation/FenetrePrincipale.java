@@ -21,5 +21,11 @@ import javax.swing.border.BevelBorder;
 import javax.swing.border.EmptyBorder;
 
 public class FenetrePrincipale extends JFrame{
-
+    
+    public void FenetrePrincipale(){
+        this.setTitle("Munckin");
+        this.setLayout(new BorderLayout());
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        
+    }
 }
