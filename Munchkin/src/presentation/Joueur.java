@@ -7,7 +7,10 @@ import cards.Malediction;
 import cards.Monstre;
 
 public class Joueur {
-    private int handsize;
+    private int niveau;
+    private int attack;
+    private String name;
+    private LinkedList<Object> hand;
     private Classe classe;
     private Race race;
     private int classemax;
@@ -25,13 +28,65 @@ public class Joueur {
     private int nbr_gros;
     private int nbr_grosMax;
 
-    public int getHandsize() {
-        return this.handsize;
+    public Joueur(String name){
+        this.setNiveau(1);
+        this.setAttack(1);
+        this.setName(name);
+        /*for (int i, i < 4, i++) {
+            this.hand.add(nextCard("Treasure"))
+            this.hand.add(nextCard("Dungeon"))
+        }*/
+        this.setClasse(Classe.sans_classe);
+        this.setRace(Race.humain);
+        this.setRacemax(1);
+        this.setClassemax(1);
+        this.setNbr_armesMax(2);
+        this.setHandsizeMax(5);
+        this.setNbr_armuresMax(1);
+        this.setNbr_chapeauMax(1);
+        this.setNbr_chaussuresMax(1);
+        this.setNbr_grosMax(1);
+        this.setNbr_armures(0);
+        this.setNbr_armes(0);
+        this.setNbr_chapeau(0);
+        this.setNbr_gros(0);
+        this.setNbr_chaussure(0);
+        this.equipement = new LinkedList<Object>();
     }
 
-    public void setHandsize(int handsize) {
-        this.handsize = handsize;
+    public int getNiveau() {
+        return this.niveau;
     }
+
+    public void setNiveau(int niveau) {
+        this.niveau = niveau;
+    }
+
+    public int getAttack() {
+        return this.attack;
+    }
+
+    public void setAttack(int attack) {
+        this.attack = attack;
+    }
+
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public LinkedList<Object> getHand() {
+        return this.hand;
+    }
+
+    public void setHand(LinkedList<Object> hand) {
+        this.hand = hand;
+    }
+
 
     public Classe getClasse() {
         return this.classe;
