@@ -1,5 +1,5 @@
 package cards;
 
 public interface IArme {
-	public boolean EstEquipable();
+	public boolean EstEquipable(Arme arme);
 }
