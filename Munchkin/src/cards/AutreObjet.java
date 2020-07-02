@@ -1,6 +1,6 @@
 package cards;
 
-public class AutreObjet {
+public class AutreObjet implements IAutreObjet {
 	private String NomAutreObjet;
 	private Integer ValeurEnOr;
 	private String Reserve;
@@ -17,5 +17,17 @@ public class AutreObjet {
 		this.Interdit = Interdit;
 		this.Description = Description;
 		this.Gros = Gros;
+	}
+
+	@Override
+	public void Equiper(AutreObjet autreobjet) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void Desequiper(AutreObjet autreobjet) {
+		// TODO Auto-generated method stub
+		
 	}
 }

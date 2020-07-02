@@ -1,6 +1,6 @@
 package cards;
 
-public class Chaussures {
+public class Chaussures implements IChaussures{
 	private String NomChaussures;
 	private Integer ValeurEnOr;
 	private String Reserve;
@@ -17,5 +17,17 @@ public class Chaussures {
 		this.Interdit = Interdit;
 		this.Description = Description;
 		this.Gros = Gros;
+	}
+
+	@Override
+	public void Equiper(Chaussures chaussures) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void Desequiper(Chaussures chaussures) {
+		// TODO Auto-generated method stub
+		
 	}
 }

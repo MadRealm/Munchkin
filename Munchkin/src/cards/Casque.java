@@ -18,4 +18,16 @@ public class Casque implements ICasque {
 		this.Description = Description;
 		this.Gros = Gros;
 	}
+
+	@Override
+	public void Equiper(Casque casque) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void Desequiper(Casque casque) {
+		// TODO Auto-generated method stub
+		
+	}
 }

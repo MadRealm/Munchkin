@@ -18,4 +18,16 @@ public class Armure implements IArmure {
 		this.Description = Description;
 		this.Gros = Gros;
 	}
+
+	@Override
+	public void Equiper(Armure armure) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void Desequiper(Armure armure) {
+		// TODO Auto-generated method stub
+		
+	}
 }

@@ -21,4 +21,16 @@ public class Arme implements IArme {
 		this.Gros = Gros;
 	}
 
+	@Override
+	public void Equiper(Arme arme) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void Desequiper(Arme arme) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
