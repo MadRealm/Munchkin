@@ -1,5 +1,13 @@
 package cards;
 
-public class Classe {
-	private Integer blabla;
+public enum Classe {
+	guerrier,
+	magicien,
+	voleur,
+	prêtre,
+	sans_classe;
 }
+
+
+
+
