@@ -2,14 +2,14 @@ package cards;
 
 public class Chaussures extends CarteTresor implements IChaussures{
 	private String NomChaussures;
-	private Integer ValeurEnOr;
+	private int ValeurEnOr;
 	private String Reserve;
 	private String Interdit;
 	private String Description;
 	private Boolean Gros;
-	private Integer Bonus;
+	private int Bonus;
 	
-	public Chaussures (String NomChaussures,Integer ValeurEnOr,String Reserve,String Interdit,Integer Bonus,String Description,Boolean Gros) {
+	public Chaussures (String NomChaussures,int ValeurEnOr,String Reserve,String Interdit,int Bonus,String Description,Boolean Gros) {
 		this.Bonus = Bonus;
 		this.NomChaussures = NomChaussures;
 		this.ValeurEnOr = ValeurEnOr;

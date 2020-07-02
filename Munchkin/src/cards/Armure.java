@@ -2,14 +2,14 @@ package cards;
 
 public class Armure extends CarteTresor implements IArmure {
 	private String NomArmure;
-	private Integer ValeurEnOr;
+	private int ValeurEnOr;
 	private String Reserve;
 	private String Interdit;
 	private String Description;
 	private Boolean Gros;
-	private Integer Bonus;
+	private int Bonus;
 	
-	public Armure (String NomArmure,Integer ValeurEnOr,String Reserve,String Interdit,Integer Bonus,String Description,Boolean Gros) {
+	public Armure (String NomArmure,int ValeurEnOr,String Reserve,String Interdit,int Bonus,String Description,Boolean Gros) {
 		this.Bonus = Bonus;
 		this.NomArmure = NomArmure;
 		this.ValeurEnOr = ValeurEnOr;

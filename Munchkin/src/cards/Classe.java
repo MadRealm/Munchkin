@@ -1,6 +1,7 @@
 package cards;
 
-public interface Classe {
+public enum Classe {
+    sans_classe;
 	
 }
 
