@@ -1,6 +1,6 @@
 package cards;
 
-public class Casque implements ICasque {
+public class Casque extends CarteTresor implements ICasque {
 	private String NomCasque;
 	private int ValeurEnOr;
 	private String Reserve;

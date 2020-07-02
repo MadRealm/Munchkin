@@ -1,6 +1,6 @@
 package cards;
 
-public class Chaussures implements IChaussures{
+public class Chaussures extends CarteTresor implements IChaussures{
 	private String NomChaussures;
 	private Integer ValeurEnOr;
 	private String Reserve;
