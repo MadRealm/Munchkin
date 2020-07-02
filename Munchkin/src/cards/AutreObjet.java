@@ -1,6 +1,6 @@
 package cards;
 
-public class AutreObjet implements IAutreObjet {
+public class AutreObjet extends CarteTresor implements IAutreObjet {
 	private String NomAutreObjet;
 	private Integer ValeurEnOr;
 	private String Reserve;

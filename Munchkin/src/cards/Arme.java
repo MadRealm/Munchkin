@@ -1,6 +1,6 @@
 package cards;
 
-public class Arme implements IArme {
+public class Arme extends CarteTresor implements IArme {
 	private String NomArme;
 	private Integer ValeurEnOr;
 	private String Reserve;
