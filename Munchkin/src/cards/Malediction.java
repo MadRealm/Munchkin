@@ -7,4 +7,15 @@ public class Malediction extends CarteDonjon{
 		super(NomCarte);
 		this.Description = Description;
 	}
+
+	public String getDescription() {
+		return Description;
+	}
+
+	public void setDescription(String description) {
+		Description = description;
+	}
+
+	
+
 }
