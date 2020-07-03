@@ -28,6 +28,7 @@ public class Joueur {
     private int nbr_chaussuresMax;
     private int nbr_gros;
     private int nbr_grosMax;
+    private int fuite;
 
     public Joueur(String name){
         this.setNiveau(1);
@@ -54,6 +55,7 @@ public class Joueur {
         this.setNbr_chapeau(0);
         this.setNbr_gros(0);
         this.setNbr_chaussure(0);
+        this.setFuite(fuite);
         this.equipement = new LinkedList<Object>();
     }
 
@@ -226,4 +228,13 @@ public class Joueur {
         this.nbr_grosMax = nbr_grosMax;
     }
 
+	public int getFuite() {
+		return fuite;
+	}
+
+	public void setFuite(int fuite) {
+		this.fuite = fuite;
+	}
+    
+    
 }
