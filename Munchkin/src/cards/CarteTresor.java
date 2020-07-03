@@ -1,5 +1,9 @@
 package cards;
 
 public class CarteTresor extends Carte{
-	private CarteTresor Cartetresor;
+	
+	
+	public CarteTresor(String NomCarte) {
+		super(NomCarte);
+	}
 }

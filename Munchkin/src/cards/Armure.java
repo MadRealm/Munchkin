@@ -1,7 +1,6 @@
 package cards;
 
 public class Armure extends CarteTresor implements IArmure {
-	private String NomArmure;
 	private int ValeurEnOr;
 	private String Reserve;
 	private String Interdit;
@@ -9,14 +8,62 @@ public class Armure extends CarteTresor implements IArmure {
 	private Boolean Gros;
 	private int Bonus;
 	
-	public Armure (String NomArmure,int ValeurEnOr,String Reserve,String Interdit,int Bonus,String Description,Boolean Gros) {
+	public Armure (String NomCarte,int ValeurEnOr,String Reserve,String Interdit,int Bonus,String Description,Boolean Gros) {
+		super(NomCarte);
 		this.Bonus = Bonus;
-		this.NomArmure = NomArmure;
 		this.ValeurEnOr = ValeurEnOr;
 		this.Reserve = Reserve;
 		this.Interdit = Interdit;
 		this.Description = Description;
 		this.Gros = Gros;
+	}
+	
+	public int getValeurEnOr() {
+		return ValeurEnOr;
+	}
+
+	public void setValeurEnOr(int valeurEnOr) {
+		ValeurEnOr = valeurEnOr;
+	}
+
+	public String getReserve() {
+		return Reserve;
+	}
+
+	public void setReserve(String reserve) {
+		Reserve = reserve;
+	}
+
+	public String getInterdit() {
+		return Interdit;
+	}
+
+	public void setInterdit(String interdit) {
+		Interdit = interdit;
+	}
+
+	public String getDescription() {
+		return Description;
+	}
+
+	public void setDescription(String description) {
+		Description = description;
+	}
+
+	public Boolean getGros() {
+		return Gros;
+	}
+
+	public void setGros(Boolean gros) {
+		Gros = gros;
+	}
+
+	public int getBonus() {
+		return Bonus;
+	}
+
+	public void setBonus(int bonus) {
+		Bonus = bonus;
 	}
 
 	@Override

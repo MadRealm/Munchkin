@@ -1,7 +1,6 @@
 package cards;
 
 public class Chaussures extends CarteTresor implements IChaussures{
-	private String NomChaussures;
 	private int ValeurEnOr;
 	private String Reserve;
 	private String Interdit;
@@ -9,9 +8,9 @@ public class Chaussures extends CarteTresor implements IChaussures{
 	private Boolean Gros;
 	private int Bonus;
 	
-	public Chaussures (String NomChaussures,int ValeurEnOr,String Reserve,String Interdit,int Bonus,String Description,Boolean Gros) {
+	public Chaussures (String NomCarte,int ValeurEnOr,String Reserve,String Interdit,int Bonus,String Description,Boolean Gros) {
+		super(NomCarte);
 		this.Bonus = Bonus;
-		this.NomChaussures = NomChaussures;
 		this.ValeurEnOr = ValeurEnOr;
 		this.Reserve = Reserve;
 		this.Interdit = Interdit;
