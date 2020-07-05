@@ -101,7 +101,7 @@ public class Joueur {
 
 
     public Classe getClasse() {
-        return this.classe;
+        return classe;
     }
 
     public void setClasse(Classe classe) {
