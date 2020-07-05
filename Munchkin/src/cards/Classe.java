@@ -15,7 +15,7 @@ public enum Classe {
 	
 	Classe(boolean Equipable){
 		this.Equipable = Equipable;
-}
+	}
 	
 	public boolean EstEquipable() {
 		if(joueur.getClasse() == sans_classe) {
@@ -27,32 +27,35 @@ public enum Classe {
 
 	public void EquiperGuerrier() {
 		if(Equipable == true) {
-			joueur.setClasse(Classe.guerrier);
+			joueur.setClasse(guerrier);
 		}
 	}
 
 	public void EquiperVoleur() {
 		if(Equipable == true) {
-			joueur.setClasse(Classe.voleur);
+			joueur.setClasse(voleur);
 		}
 	}
 
 	public void EquiperMagicien() {
 		if(Equipable == true) {
-			joueur.setClasse(Classe.magicien);
+			joueur.setClasse(magicien);
 		}
 	}
 	
 	public void EquiperPretre() {
 		if(Equipable == true) {
-			joueur.setClasse(Classe.pretre);
+			joueur.setClasse(pretre);
 		}
 	}
 		
 	public void DesequiperClasse() {
-		joueur.setClasse(Classe.sans_classe);
+		joueur.setClasse(sans_classe);
 	}
+		
 }
+
+
 
 
 
