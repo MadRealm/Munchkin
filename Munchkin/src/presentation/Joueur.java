@@ -263,11 +263,12 @@ public class Joueur {
     public void Vendre(Arme arme){
         Boolean isEquiped = this.getEquipement().contains(arme);
         Boolean isinHand = this.getHand().contains(arme);
-        if (isEquiped){
+        if (isEquiped&&!isinHand){
             this.equipement.remove(arme);
         } 
-        if (isinHand){
-            this.hand.remove(arme)
+        if (isinHand&&!isEquiped){
+            this.hand.remove(arme);
         } 
-        this.setArgent(this.getArgent()+arme.getValeurEnOr());  }
+        this.setArgent(this.getArgent()+arme.getValeurEnOr());
+        }
 }

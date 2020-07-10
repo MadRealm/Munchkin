@@ -12,6 +12,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
@@ -21,17 +22,76 @@ import javax.swing.SwingConstants;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.EmptyBorder;
 
+import cards.Carte;
+
 public class FenetrePrincipale extends JFrame{
     
+    private Joueur j1;
+    private Joueur j2;
+    private Joueur j3;
+    private Joueur j4;
+    private JList def_tresor;
+    private JList def_donjon;
+
+    public Joueur getJ1() {
+        return this.j1;
+    }
+
+    public void setJ1(Joueur j1) {
+        this.j1 = j1;
+    }
+
+    public Joueur getJ2() {
+        return this.j2;
+    }
+
+    public void setJ2(Joueur j2) {
+        this.j2 = j2;
+    }
+
+    public Joueur getJ3() {
+        return this.j3;
+    }
+
+    public void setJ3(Joueur j3) {
+        this.j3 = j3;
+    }
+
+    public Joueur getJ4() {
+        return this.j4;
+    }
+
+    public void setJ4(Joueur j4) {
+        this.j4 = j4;
+    }
+
+    public JList getDef_tresor() {
+        return this.def_tresor;
+    }
+
+    public void setDef_tresor(JList def_tresor) {
+        this.def_tresor = def_tresor;
+    }
+
+    public JList getDef_donjon() {
+        return this.def_donjon;
+    }
+
+    public void setDef_donjon(JList def_donjon) {
+        this.def_donjon = def_donjon;
+    }
+
     public FenetrePrincipale(){
         this.setTitle("Munckin");
         BorderLayout plateau = new BorderLayout();
         this.setLayout(plateau);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        Joueur j1 = new Joueur("Joueur 1");
-        Joueur j2 = new Joueur("Joueur 2");
-        Joueur j3 = new Joueur("Joueur 3");
-        Joueur j4 = new Joueur("Joueur 4");
+        this.j1 = new Joueur("Joueur 1");
+        this.j2 = new Joueur("Joueur 2");
+        this.j3 = new Joueur("Joueur 3");
+        this.j4 = new Joueur("Joueur 4");
+        this.def_donjon = new JList<Carte>();
+        this.def_tresor = new JList<Carte>();
         this.BuildPanelNorth(j1);
         this.BuildPanelEast(j2);
         this.BuildPanelSouth(j3);
