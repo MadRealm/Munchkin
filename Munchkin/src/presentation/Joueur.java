@@ -1,6 +1,8 @@
 package presentation;
+
 import java.util.LinkedList;
 
+import cards.Arme;
 import cards.Carte;
 import cards.Classe;
 import cards.Race;
@@ -11,6 +13,7 @@ public class Joueur {
     private int niveau;
     private int attack;
     private int sex;
+    private int argent;
     private String name;
     private LinkedList<Carte> hand;
     private Classe classe;
@@ -84,6 +87,14 @@ public class Joueur {
 
     public void setSex(int sex) {
         this.sex = sex;
+    }
+
+    public int getArgent() {
+        return this.argent;
+    }
+
+    public void setArgent(int argent) {
+        this.argent = argent;
     }
 
     public String getName() {
@@ -239,5 +250,24 @@ public class Joueur {
 		this.fuite = fuite;
 	}
     
-    
+    public void Equiper(Arme arme){
+        this.equipement.add(arme);
+        this.hand.remove(arme);
+    }
+
+    public void Desequiper(Arme arme){
+        this.equipement.add(arme);
+        this.hand.remove(arme);
+    }
+
+    public void Vendre(Arme arme){
+        Boolean isEquiped = this.getEquipement().contains(arme);
+        Boolean isinHand = this.getHand().contains(arme);
+        if (isEquiped){
+            this.equipement.remove(arme);
+        } 
+        if (isinHand){
+            this.hand.remove(arme)
+        } 
+        this.setArgent(this.getArgent()+arme.getValeurEnOr());  }
 }

@@ -77,4 +77,9 @@ public class Armure extends CarteTresor implements IArmure {
 		// TODO Auto-generated method stub
 		
 	}
+
+	public void Vendre(Armure armure) {
+		// TODO Auto-generated method stub
+
+	}
 }

@@ -9,4 +9,5 @@ public interface IArmure {
 	}
 	public void Equiper(Armure armure);
 	public void Desequiper(Armure armure);
+	public void Vendre(Armure armure);
 }

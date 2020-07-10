@@ -1,5 +1,7 @@
 package cards;
 
+import presentation.Joueur;
+
 public class Arme extends CarteTresor implements IArme {
 	private int ValeurEnOr;
 	private String Reserve;
@@ -104,18 +106,18 @@ public class Arme extends CarteTresor implements IArme {
 		Bonus = bonus;
 	}
 
-
-
-	@Override
-	public void Equiper(Arme arme) {
-		// TODO Auto-generated method stub
-		
+	public void Equiper(Joueur joueur){
+		if (this.EstEquipable(joueur)){
+			joueur.Equiper(this);
+		}	
 	}
 
-	@Override
-	public void Desequiper(Arme arme) {
-		// TODO Auto-generated method stub
+	public void Desequiper(Joueur joueur) {
+		if (this.EstDeffaussable()){
+			joueur.Desequiper(this);
+		}
+	}
+	public void Vendre(Joueur joueur) {
 		
 	}
-
 }
