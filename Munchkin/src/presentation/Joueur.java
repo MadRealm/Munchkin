@@ -1,6 +1,7 @@
 package presentation;
 import java.util.LinkedList;
 
+import cards.Carte;
 import cards.Classe;
 import cards.Race;
 import cards.Malediction;
@@ -11,13 +12,13 @@ public class Joueur {
     private int attack;
     private int sex;
     private String name;
-    private LinkedList<Object> hand;
+    private LinkedList<Carte> hand;
     private Classe classe;
     private Race race;
     private int classemax;
     private int racemax;
     private int handsizeMax;
-    private LinkedList<Object> equipement;
+    private LinkedList<Carte> equipement;
     private int nbr_armes;
     private int nbr_armesMax;
     private int nbr_chapeau;
@@ -35,7 +36,7 @@ public class Joueur {
         this.setAttack(1);
         this.setName(name);
         this.setSex(1);
-
+        this.setHand(new LinkedList<Carte>());
         /*for (int i, i < 4, i++) {
             this.hand.add(nextCard("Treasure"))
             this.hand.add(nextCard("Dungeon"))
@@ -55,8 +56,10 @@ public class Joueur {
         this.setNbr_chapeau(0);
         this.setNbr_gros(0);
         this.setNbr_chaussure(0);
-        this.setFuite(fuite);
-        this.equipement = new LinkedList<Object>();
+        this.setFuite(4);
+        this.equipement = new LinkedList<Carte>();
+        Carte card = new Carte("Meilleure carte"); //Pour éviter d'avoir une liste vide pour la main du joueur
+        this.getHand().add(card);
     }
 
     public int getNiveau() {
@@ -91,11 +94,11 @@ public class Joueur {
         this.name = name;
     }
 
-    public LinkedList<Object> getHand() {
+    public LinkedList<Carte> getHand() {
         return this.hand;
     }
 
-    public void setHand(LinkedList<Object> hand) {
+    public void setHand(LinkedList<Carte> hand) {
         this.hand = hand;
     }
 
@@ -140,11 +143,11 @@ public class Joueur {
         this.handsizeMax = handsizeMax;
     }
 
-    public LinkedList<Object> getEquipement() {
+    public LinkedList<Carte> getEquipement() {
         return this.equipement;
     }
 
-    public void setEquipement(LinkedList<Object> equipement) {
+    public void setEquipement(LinkedList<Carte> equipement) {
         this.equipement = equipement;
     }
 
