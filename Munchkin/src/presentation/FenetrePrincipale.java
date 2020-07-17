@@ -30,8 +30,10 @@ public class FenetrePrincipale extends JFrame{
     private Joueur j2;
     private Joueur j3;
     private Joueur j4;
-    private JList def_tresor;
-    private JList def_donjon;
+    private JList<Carte> def_tresor;
+    private JList<Carte> def_donjon;
+    private LinkedList<Carte> pioche_tresor;
+    private LinkedList<Carte> pioche_donjon;
 
     public Joueur getJ1() {
         return this.j1;
@@ -65,20 +67,36 @@ public class FenetrePrincipale extends JFrame{
         this.j4 = j4;
     }
 
-    public JList getDef_tresor() {
+    public JList<Carte> getDef_tresor() {
         return this.def_tresor;
     }
 
-    public void setDef_tresor(JList def_tresor) {
+    public void setDef_tresor(JList<Carte> def_tresor) {
         this.def_tresor = def_tresor;
     }
 
-    public JList getDef_donjon() {
+    public JList<Carte> getDef_donjon() {
         return this.def_donjon;
     }
 
-    public void setDef_donjon(JList def_donjon) {
+    public void setDef_donjon(JList<Carte> def_donjon) {
         this.def_donjon = def_donjon;
+    }
+    
+    public LinkedList<Carte> getPioche_tresor() {
+        return this.pioche_tresor;
+    }
+
+    public void setPioche_tresor(LinkedList<Carte> pioche_tresor) {
+        this.pioche_tresor = pioche_tresor;
+    }
+
+    public LinkedList<Carte> getPioche_donjon() {
+        return this.pioche_donjon;
+    }
+
+    public void setPioche_donjon(LinkedList<Carte> pioche_donjon) {
+        this.pioche_donjon = pioche_donjon;
     }
 
     public FenetrePrincipale(){
@@ -92,12 +110,48 @@ public class FenetrePrincipale extends JFrame{
         this.j4 = new Joueur("Joueur 4");
         this.def_donjon = new JList<Carte>();
         this.def_tresor = new JList<Carte>();
+        this.pioche_donjon = new LinkedList<Carte>();
+        this.pioche_tresor = new LinkedList<Carte>();
+        this.BuildPanelCenter();
         this.BuildPanelNorth(j1);
         this.BuildPanelEast(j2);
         this.BuildPanelSouth(j3);
         this.BuildPanelWest(j4);
 
     }
+    public void BuildPanelCenter(){
+        JPanel Panel = new JPanel();
+        JPanel inside = new JPanel();
+        Panel.add(inside);
+        this.add(Panel, BorderLayout.CENTER);
+        JPanel d1 = new JPanel();
+        BoxLayout box1 = new BoxLayout(d1, BoxLayout.LINE_AXIS);
+        d1.setLayout(box1);
+        JPanel d2 = new JPanel();
+        BoxLayout box2 = new BoxLayout(d2, BoxLayout.LINE_AXIS);
+        d2.setLayout(box2);
+        JPanel d3 = new JPanel();
+        BoxLayout box3 = new BoxLayout(d3, BoxLayout.LINE_AXIS);
+        d3.setLayout(box3);
+        JPanel d4 = new JPanel();
+        BoxLayout box4 = new BoxLayout(d4, BoxLayout.LINE_AXIS);
+        d4.setLayout(box4);
+        d1.add(new JLabel("Défausse Donjon"));
+        d2.add(new JLabel("Pioche Donjon"));
+        d3.add(new JLabel("Pioche Trésor"));
+        d4.add(new JLabel("Défuasse Trésor"));
+        inside.add(d1);
+        inside.add(d2);
+        inside.add(d3);
+        inside.add(d4);
+        d1.setBorder(BorderFactory.createLineBorder(Color.black));
+        d2.setBorder(BorderFactory.createLineBorder(Color.black));
+        d3.setBorder(BorderFactory.createLineBorder(Color.black));
+        d4.setBorder(BorderFactory.createLineBorder(Color.black));
+
+    
+    }
+
 
     public void BuildPanelNorth(Joueur j){
         JPanel Panel = new JPanel();
@@ -117,6 +171,7 @@ public class FenetrePrincipale extends JFrame{
             panel_main.add(new JLabel(nom_carte));
         }
         Panel.add(inside);
+        Panel.setBorder(BorderFactory.createLineBorder(Color.BLUE));
     }     
     public void BuildPanelWest(Joueur j){
         JPanel Panel = new JPanel();
@@ -136,6 +191,8 @@ public class FenetrePrincipale extends JFrame{
             panel_main.add(new JLabel(nom_carte));
         }
         Panel.add(inside);
+        Panel.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+
     }
 
     public void BuildPanelSouth(Joueur j){
@@ -156,6 +213,8 @@ public class FenetrePrincipale extends JFrame{
             panel_main.add(new JLabel(nom_carte));
         }
         Panel.add(inside);
+        Panel.setBorder(BorderFactory.createLineBorder(Color.RED));
+
     }
 
     public void BuildPanelEast(Joueur j){
@@ -176,5 +235,7 @@ public class FenetrePrincipale extends JFrame{
             panel_main.add(new JLabel(nom_carte));
         }
         Panel.add(inside);
+        Panel.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+
     }
 }

@@ -1,12 +1,14 @@
 package cards;
 
+import presentation.Joueur;
+
 public interface IAutreObjet {
-	public default boolean EstEquipable(AutreObjet autreobjet) {
-		return true;
-	}
-	public default boolean EstDeffaussable(AutreObjet autreobjet) {
-		return true;
-	}
-	public void Equiper(AutreObjet autreobjet);
-	public void Desequiper(AutreObjet autreobjet);
+	
+	public void Equiper(Joueur joueur);
+	
+	public void Desequiper(Joueur joueur);
+	
+	public void Defausser(Joueur joueur);
+	
+	public void Vendre(Joueur joueur);
 }

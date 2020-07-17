@@ -1,4 +1,5 @@
 package cards;
+import presentation.Joueur;
 
 public class Casque extends CarteTresor implements ICasque {
 	
@@ -8,6 +9,42 @@ public class Casque extends CarteTresor implements ICasque {
 	private String Description;
 	private Boolean Gros;
 	private int Bonus;
+	private boolean EstEquipable;
+	private boolean EstDeffaussable;
+	private boolean Estdesequipable;
+	private boolean EstVendable;
+
+	public boolean isEstEquipable() {
+		return this.EstEquipable;
+	}
+
+	public void setEstEquipable(boolean EstEquipable) {
+		this.EstEquipable = EstEquipable;
+	}
+
+	public boolean isEstDeffaussable() {
+		return this.EstDeffaussable;
+	}
+
+	public void setEstDeffaussable(boolean EstDeffaussable) {
+		this.EstDeffaussable = EstDeffaussable;
+	}
+
+	public boolean isEstdesequipable() {
+		return this.Estdesequipable;
+	}
+
+	public void setEstdesequipable(boolean Estdesequipable) {
+		this.Estdesequipable = Estdesequipable;
+	}
+
+	public boolean isEstVendable() {
+		return this.EstVendable;
+	}
+
+	public void setEstVendable(boolean EstVendable) {
+		this.EstVendable = EstVendable;
+	}
 	
 	public Casque (String NomCarte,int ValeurEnOr,String Reserve,String Interdit,int Bonus,String Description,Boolean Gros) {
 		super(NomCarte);
@@ -17,6 +54,11 @@ public class Casque extends CarteTresor implements ICasque {
 		this.Interdit = Interdit;
 		this.Description = Description;
 		this.Gros = Gros;
+		this.EstDeffaussable = true;
+		this.EstEquipable = true;
+		this.EstVendable = true;
+		this.Estdesequipable = true;
+		
 	}
 
 	
@@ -85,23 +127,29 @@ public class Casque extends CarteTresor implements ICasque {
 		return Bonus;
 	}
 
-
-
 	public void setBonus(int bonus) {
 		Bonus = bonus;
 	}
 
-
-
-	@Override
-	public void Equiper(Casque casque) {
-		// TODO Auto-generated method stub
-		
+	public void Equiper(Joueur joueur){
+		if (this.EstEquipable){
+			joueur.Equiper(this);
+		}	
 	}
 
-	@Override
-	public void Desequiper(Casque casque) {
-		// TODO Auto-generated method stub
-		
+	public void Desequiper(Joueur joueur) {
+		if (this.Estdesequipable){
+			joueur.Desequiper(this);
+		}
+	}
+	public void Vendre(Joueur joueur) {
+		if (this.EstVendable){
+			joueur.Vendre(this);
+		}
+	}
+	public void Defausser(Joueur joueur){
+		if (this.EstDeffaussable){
+			joueur.Defausser(this);
+		}
 	}
 }

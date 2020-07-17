@@ -1,4 +1,5 @@
 package cards;
+import presentation.Joueur;
 
 public class Armure extends CarteTresor implements IArmure {
 	private int ValeurEnOr;
@@ -7,6 +8,10 @@ public class Armure extends CarteTresor implements IArmure {
 	private String Description;
 	private Boolean Gros;
 	private int Bonus;
+	private boolean EstEquipable;
+	private boolean EstDeffaussable;
+	private boolean Estdesequipable;
+	private boolean EstVendable;
 	
 	public Armure (String NomCarte,int ValeurEnOr,String Reserve,String Interdit,int Bonus,String Description,Boolean Gros) {
 		super(NomCarte);
@@ -16,6 +21,11 @@ public class Armure extends CarteTresor implements IArmure {
 		this.Interdit = Interdit;
 		this.Description = Description;
 		this.Gros = Gros;
+		this.EstDeffaussable = true;
+		this.EstEquipable = true;
+		this.EstVendable = true;
+		this.Estdesequipable = true;
+		
 	}
 	
 	public int getValeurEnOr() {
@@ -66,20 +76,25 @@ public class Armure extends CarteTresor implements IArmure {
 		Bonus = bonus;
 	}
 
-	@Override
-	public void Equiper(Armure armure) {
-		// TODO Auto-generated method stub
-		
+	public void Equiper(Joueur joueur){
+		if (this.EstEquipable){
+			joueur.Equiper(this);
+		}	
 	}
 
-	@Override
-	public void Desequiper(Armure armure) {
-		// TODO Auto-generated method stub
-		
+	public void Desequiper(Joueur joueur) {
+		if (this.Estdesequipable){
+			joueur.Desequiper(this);
+		}
 	}
-
-	public void Vendre(Armure armure) {
-		// TODO Auto-generated method stub
-
+	public void Vendre(Joueur joueur) {
+		if (this.EstVendable){
+			joueur.Vendre(this);
+		}
+	}
+	public void Defausser(Joueur joueur){
+		if (this.EstDeffaussable){
+			joueur.Defausser(this);
+		}
 	}
 }

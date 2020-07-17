@@ -10,6 +10,42 @@ public class Arme extends CarteTresor implements IArme {
 	private int NbrMain;
 	private Boolean Gros;
 	private int Bonus;
+	private boolean EstEquipable;
+	private boolean EstDeffaussable;
+	private boolean Estdesequipable;
+	private boolean EstVendable;
+
+	public boolean isEstEquipable() {
+		return this.EstEquipable;
+	}
+
+	public void setEstEquipable(boolean EstEquipable) {
+		this.EstEquipable = EstEquipable;
+	}
+
+	public boolean isEstDeffaussable() {
+		return this.EstDeffaussable;
+	}
+
+	public void setEstDeffaussable(boolean EstDeffaussable) {
+		this.EstDeffaussable = EstDeffaussable;
+	}
+
+	public boolean isEstdesequipable() {
+		return this.Estdesequipable;
+	}
+
+	public void setEstdesequipable(boolean Estdesequipable) {
+		this.Estdesequipable = Estdesequipable;
+	}
+
+	public boolean isEstVendable() {
+		return this.EstVendable;
+	}
+
+	public void setEstVendable(boolean EstVendable) {
+		this.EstVendable = EstVendable;
+	}
 
 	public Arme (String NomCarte,int ValeurEnOr,String Reserve,String Interdit,int Bonus,String Description,int NbrMain,Boolean Gros) {
 		super(NomCarte);
@@ -20,6 +56,10 @@ public class Arme extends CarteTresor implements IArme {
 		this.Description = Description;
 		this.NbrMain = NbrMain;
 		this.Gros = Gros;
+		this.EstDeffaussable = true;
+		this.EstEquipable = true;
+		this.EstVendable = true;
+		this.Estdesequipable = true;
 	}
 	
 	
@@ -107,17 +147,26 @@ public class Arme extends CarteTresor implements IArme {
 	}
 
 	public void Equiper(Joueur joueur){
-		if (this.EstEquipable(joueur)){
+		if (this.EstEquipable){
 			joueur.Equiper(this);
 		}	
 	}
 
 	public void Desequiper(Joueur joueur) {
-		if (this.EstDeffaussable()){
+		if (this.Estdesequipable){
 			joueur.Desequiper(this);
 		}
 	}
 	public void Vendre(Joueur joueur) {
-		
+		if (this.EstVendable){
+			joueur.Vendre(this);
+		}
 	}
-}
+	public void Defausser(Joueur joueur){
+		if (this.EstDeffaussable){
+			joueur.Defausser(this);
+		}
+	}
+	}
+
+	

@@ -8,6 +8,10 @@ import cards.Classe;
 import cards.Race;
 import cards.Malediction;
 import cards.Monstre;
+import cards.Armure;
+import cards.AutreObjet;
+import cards.Chaussures;
+import cards.Casque;
 
 public class Joueur {
     private int niveau;
@@ -260,6 +264,17 @@ public class Joueur {
         this.hand.remove(arme);
     }
 
+    public void Defausser(Arme arme){
+        Boolean isEquiped = this.getEquipement().contains(arme);
+        Boolean isinHand = this.getHand().contains(arme);
+        if (isEquiped&&!isinHand){
+            this.equipement.remove(arme);
+        } 
+        if (isinHand&&!isEquiped){
+            this.hand.remove(arme);
+        } 
+    }
+
     public void Vendre(Arme arme){
         Boolean isEquiped = this.getEquipement().contains(arme);
         Boolean isinHand = this.getHand().contains(arme);
@@ -270,5 +285,137 @@ public class Joueur {
             this.hand.remove(arme);
         } 
         this.setArgent(this.getArgent()+arme.getValeurEnOr());
-        }
+    }
+    
+    public void Equiper(Armure armure){
+        this.equipement.add(armure);
+        this.hand.remove(armure);
+    }
+
+    public void Desequiper(Armure armure){
+        this.equipement.add(armure);
+        this.hand.remove(armure);
+    }
+
+    public void Defausser(Armure armure){
+        Boolean isEquiped = this.getEquipement().contains(armure);
+        Boolean isinHand = this.getHand().contains(armure);
+        if (isEquiped&&!isinHand){
+            this.equipement.remove(armure);
+        } 
+        if (isinHand&&!isEquiped){
+            this.hand.remove(armure);
+        } 
+    }
+
+    public void Vendre(Armure armure){
+        Boolean isEquiped = this.getEquipement().contains(armure);
+        Boolean isinHand = this.getHand().contains(armure);
+        if (isEquiped&&!isinHand){
+            this.equipement.remove(armure);
+        } 
+        if (isinHand&&!isEquiped){
+            this.hand.remove(armure);
+        } 
+        this.setArgent(this.getArgent()+armure.getValeurEnOr());
+    }
+
+    public void Equiper(Casque casque){
+        this.equipement.add(casque);
+        this.hand.remove(casque);
+    }
+    
+    public void Desequiper(Casque casque){
+        this.equipement.add(casque);
+        this.hand.remove(casque);
+     }
+    
+    public void Defausser(Casque casque){
+        Boolean isEquiped = this.getEquipement().contains(casque);
+        Boolean isinHand = this.getHand().contains(casque);
+        if (isEquiped&&!isinHand){
+            this.equipement.remove(casque);
+        } 
+        if (isinHand&&!isEquiped){
+            this.hand.remove(casque);
+        } 
+    }
+    
+    public void Vendre(Casque casque){
+        Boolean isEquiped = this.getEquipement().contains(casque);
+        Boolean isinHand = this.getHand().contains(casque);
+        if (isEquiped&&!isinHand){
+            this.equipement.remove(casque);
+        } 
+        if (isinHand&&!isEquiped){
+            this.hand.remove(casque);
+        } 
+        this.setArgent(this.getArgent()+casque.getValeurEnOr());
+    }
+
+    public void Equiper(AutreObjet autreobjet){
+        this.equipement.add(autreobjet);
+        this.hand.remove(autreobjet);
+    }
+
+    public void Desequiper(AutreObjet autreobjet){
+        this.equipement.add(autreobjet);
+        this.hand.remove(autreobjet);
+    }
+
+    public void Defausser(AutreObjet autreobjet){
+        Boolean isEquiped = this.getEquipement().contains(autreobjet);
+        Boolean isinHand = this.getHand().contains(autreobjet);
+        if (isEquiped&&!isinHand){
+            this.equipement.remove(autreobjet);
+        } 
+        if (isinHand&&!isEquiped){
+            this.hand.remove(autreobjet);
+        } 
+    }
+
+    public void Vendre(AutreObjet autreobjet){
+        Boolean isEquiped = this.getEquipement().contains(autreobjet);
+        Boolean isinHand = this.getHand().contains(autreobjet);
+        if (isEquiped&&!isinHand){
+            this.equipement.remove(autreobjet);
+        } 
+        if (isinHand&&!isEquiped){
+            this.hand.remove(autreobjet);
+        } 
+        this.setArgent(this.getArgent()+autreobjet.getValeurEnOr());
+    }
+
+    public void Equiper(Chaussures chaussures){
+        this.equipement.add(chaussures);
+        this.hand.remove(chaussures);
+    }
+
+    public void Desequiper(Chaussures chaussures){
+        this.equipement.add(chaussures);
+        this.hand.remove(chaussures);
+    }
+
+    public void Defausser(Chaussures chaussures){
+        Boolean isEquiped = this.getEquipement().contains(chaussures);
+        Boolean isinHand = this.getHand().contains(chaussures);
+        if (isEquiped&&!isinHand){
+            this.equipement.remove(chaussures);
+        } 
+        if (isinHand&&!isEquiped){
+            this.hand.remove(chaussures);
+        } 
+    }
+
+    public void Vendre(Chaussures chaussures){
+        Boolean isEquiped = this.getEquipement().contains(chaussures);
+        Boolean isinHand = this.getHand().contains(chaussures);
+        if (isEquiped&&!isinHand){
+            this.equipement.remove(chaussures);
+        } 
+        if (isinHand&&!isEquiped){
+            this.hand.remove(chaussures);
+        } 
+        this.setArgent(this.getArgent()+chaussures.getValeurEnOr());
+    }
 }

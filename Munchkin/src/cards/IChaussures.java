@@ -1,12 +1,14 @@
 package cards;
 
+import presentation.Joueur;
+
 public interface IChaussures {
-	public default boolean EstEquipable(Chaussures chaussures) {
-		return true;
-	}
-	public default boolean EstDeffaussable(Chaussures chaussures) {
-		return true;
-	}
-	public void Equiper(Chaussures chaussures);
-	public void Desequiper(Chaussures chaussures);
+	
+	public void Equiper(Joueur joueur);
+	
+	public void Desequiper(Joueur joueur);
+	
+	public void Defausser(Joueur joueur);
+	
+	public void Vendre(Joueur joueur);
 }
